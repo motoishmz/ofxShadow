@@ -1,13 +1,71 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# ------------------------
+# Xcode
+# ------------------------
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xcworkspace #?
+ 
+ 
+# ------------------------
+# OF
+# ------------------------
+devApps
+bin/data
+!bin/data/.gitkeep
+ 
+ 
+# ------------------------
+# files...
+# ------------------------
+*.pyc
+*.zip
+ 
+ 
+# ------------------------
+# cvs
+# ------------------------
+.svn
+.hg
+.cvs
+ 
+ 
+# ------------------------
+# win
+# ------------------------
+*.obj
+*.dll
+*.lib
+*.exp
+*.exe
+*.pdb
+*.*sdf
+*.suo
+*.ilk
+obj
+ 
+ 
+# ------------------------
+# osx
+# ------------------------
+*.app
+*.mode1v3
+*.pbxuser
+.DS_Store
+build
+xcuserdata
+DerivedData
+project.xcworkspace
