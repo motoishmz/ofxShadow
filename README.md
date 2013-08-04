@@ -1,4 +1,3 @@
 ofxShadow
 =========
-
-simple shader for drawing shadows on floor
+(spin-off addon from RAM Project) simple shader for drawing shadows on floor

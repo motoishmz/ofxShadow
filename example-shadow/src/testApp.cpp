@@ -30,6 +30,8 @@ void testApp::update(){
 								 250,
 								 0);
 	simple_shadow.setLightPosition(light_pos);
+	
+	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
 //--------------------------------------------------------------
