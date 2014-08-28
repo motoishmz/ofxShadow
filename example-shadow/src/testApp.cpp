@@ -19,7 +19,9 @@ void testApp::setup(){
 void testApp::update(){
 
 	// updating shadow color using mouse position
-	ofColor shadow_color = ofFloatColor(ofMap(ofGetMouseX(), 0, ofGetWidth(), 0.0, 0.5));
+	float alpha = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0.0f, 1.0f);
+	ofColor shadow_color = ofFloatColor(0.0f, 0.0f, 0.0f, alpha);
+	
 	simple_shadow.setShadowColor( shadow_color );
 	
 	// updating light position
