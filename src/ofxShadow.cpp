@@ -51,16 +51,15 @@ void ofxShadow::setup(ofCamera *camera)
 	shader.linkProgram();
 }
 
-void ofxShadow::setLightPosition(ofVec3f pos)
+void ofxShadow::setLightPosition(const ofVec3f& pos)
+{
+	setLightPosition(ofVec4f(pos));
+}
+
+void ofxShadow::setLightPosition(const ofVec4f& pos)
 {
 	static const float groundplane[] = { 0.0, 1.0, 0.0, 1.0 };
-	
-	// correct
-	ofVec4f v(pos);
-	const float* lightpos = v.getPtr();
-	
-	// bug
-	// const float* lightpos = pos.getPtr();
+	const float* lightpos = pos.getPtr();
 	
 	shadow_matrix.makeIdentityMatrix();
 	float* shadowMatrix = shadow_matrix.getPtr();
@@ -71,7 +70,6 @@ void ofxShadow::setLightPosition(ofVec3f pos)
 	{
 		for (int x = 0; x < 4; ++x)
 		{
-			
 			shadowMatrix[y * 4 + x] = -groundplane[y] * lightpos[x];
 			if (x == y) shadowMatrix[y * 4 + x] += dot;
 		}

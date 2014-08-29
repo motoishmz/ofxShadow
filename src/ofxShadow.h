@@ -25,7 +25,8 @@ class ofxShadow
 public:
 	
 	void setup(ofCamera *camera);
-	void setLightPosition(ofVec3f pos);
+	void setLightPosition(const ofVec3f& pos);
+	void setLightPosition(const ofVec4f& pos);
 	void setShadowColor(ofFloatColor color);
 	
 	void begin();
